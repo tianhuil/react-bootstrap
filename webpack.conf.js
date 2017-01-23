@@ -3,7 +3,12 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: './main.js',
-  output: { path: __dirname, filename: 'bundle.js' },
+  output: {
+    path: path.resolve(__dirname, "build"),
+    publicPath: "/assets/",
+    filename: 'bundle.js'
+  },
+  devServer: { inline: true },
   module: {
     loaders: [
       {
