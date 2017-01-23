@@ -32,7 +32,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/webpack --progress --colors --config webpack.conf.js"
+    "build": "./node_modules/.bin/webpack --progress --colors --config webpack.conf.js",
+    "start": "./node_modules/.bin/webpack-dev-server --progress --colors --port 9090 --config webpack.conf.js --hot --inline"
   },
   "repository": {
     "type": "git",
