@@ -1,7 +1,11 @@
 # react-bootstrap
-A simple script to install react / bootstrap / webpack / babel
+A simple framework for react / bootstrap / webpack / babel
 
 ## Commands
+
+```bash
+npm install
+```
 
 ```bash
 npm build
