@@ -1,6 +1,8 @@
 var path = require('path');
 var webpack = require('webpack');
 
+var PROD = JSON.parse(process.env.PROD || '0');
+
 module.exports = {
   entry: './main.js',
   output: {
@@ -9,6 +11,15 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: { inline: true },
+  plugins: PROD ? [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        dead_code: true,
+        warnings: false,
+      },
+      minimize: true
+    })
+  ] : [],
   module: {
     loaders: [
       {
